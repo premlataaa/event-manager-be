@@ -14,6 +14,9 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 8080;
 
+app.get("/",(req,res)=>{
+    res.send({id:1,message:"Welcome to Backend Service of Event Management HUB"})
+})
 app.use("/v1/user", userRouter);
 app.use("/v1/event", eventRouter);
 
